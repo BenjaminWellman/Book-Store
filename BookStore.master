@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BookStore.master.cs" Inherits="Web460Store" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Book Store</title>
+    <asp:ContentPlaceHolder id="HeadPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server">
+  <table style="padding: 10px; border: 1px solid black;">
+    <tr style="background-color:lightcyan; text-align: center;">
+      <td colspan="2">
+        <!-- page header -->
+        <h1>Book Store</h1>
+        <h2>We Sell All Kinds Of Books!</h2>
+        <!-- Label for content pages to display user message -->
+        <strong><span style="color:red;">
+          <asp:Label ID="lblUserFeedBack" Runat="server">Welcome Traveler!</asp:Label>
+          </span></strong>
+      </td>
+    </tr>
+    <tr style="vertical-align: top;">
+      <td>
+        <!-- Left content area -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" Runat="server">
+          </asp:ContentPlaceHolder>
+      </td>
+      <td>
+        <!-- right content area -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2"  Runat="server">
+          </asp:ContentPlaceHolder>
+      </td>
+    </tr>
+    <tr style="background-color:lightgrey; text-align: center;">
+      <td colspan="2">
+        <!-- page footer -->
+          Copyright Benjamin Wellman<br />
+        <strong>User's GUID:  
+          <asp:Label ID="lblGUID" Runat="server" /></strong>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
